@@ -10,7 +10,7 @@ app.post('/get-time', async (req, res) => {
   const { timezone } = req.body;
 
   try {
-    const response = await axios.get(`https://worldtimeapi.org/api/timezone/${timezone}`);
+    const response = await axios.get(`https://timeapi.io/api/Time/current/zone?timeZone=${timezone}`);
     res.json({ time: response.data.datetime });
   } catch (error) {
     res.status(500).json({ error: 'Time fetch failed' });
