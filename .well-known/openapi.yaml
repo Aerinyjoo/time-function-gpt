@@ -1,29 +1,22 @@
 openapi: 3.1.0
 info:
-  title: Time API Proxy
+  title: Simple Time Server
   version: 1.0.0
 servers:
   - url: https://your-render-url.onrender.com
 paths:
-  /get-time:
+  /now:
     get:
       operationId: get_current_time
-      summary: Get the current time for a specific timezone
-      parameters:
-        - name: timezone
-          in: query
-          required: true
-          description: Timezone in IANA format (e.g., 'Asia/Seoul')
-          schema:
-            type: string
+      summary: Get current time in Asia/Seoul
       responses:
         '200':
-          description: A JSON response with the current time
+          description: Returns the current time in Seoul
           content:
             application/json:
               schema:
                 type: object
                 properties:
-                  dateTime:
+                  time:
                     type: string
-                    example: "2025-05-09T11:13:41.1248563"
+                    example: "5/9/2025, 9:22:11 PM"
