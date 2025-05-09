@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 
-app.get('/now', (req, res) => {
+app.get('/get-time', (req, res) => {
   const seoulTime = new Date().toLocaleString("en-US", { timeZone: "Asia/Seoul" });
   res.json({ time: seoulTime });
 });
