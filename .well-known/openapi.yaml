@@ -1,17 +1,19 @@
 openapi: 3.1.0
 info:
-  title: Simple Time Server
+  title: Chungman Time Server API
   version: 1.0.0
+  description: 충만이가 현재 시간을 인식하기 위한 API
+
 servers:
-  - url: https://gpt-time-server.onrender.com
+  - url: https://gpt-time.onrender.com
+
 paths:
-  /now:
+  /get-time:
     get:
-      operationId: get_current_time
-      summary: Get current time in Asia/Seoul
+      summary: 현재 시간 가져오기 (서울 기준)
       responses:
         '200':
-          description: Returns the current time in Seoul
+          description: 현재 시간 반환
           content:
             application/json:
               schema:
@@ -19,4 +21,3 @@ paths:
                 properties:
                   time:
                     type: string
-                    example: "5/9/2025, 9:22:11 PM"
