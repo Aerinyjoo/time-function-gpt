@@ -3,7 +3,7 @@ info:
   title: Simple Time Server
   version: 1.0.0
 servers:
-  - url: https://your-render-url.onrender.com
+  - url: https://gpt-time-server.onrender.com
 paths:
   /now:
     get:
