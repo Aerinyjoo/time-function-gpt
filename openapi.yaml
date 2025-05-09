@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: Time Function API
+  version: 1.0.0
+servers:
+  - url: https://<RENDER-URL>.onrender.com
+paths:
+  /get-time:
+    post:
+      operationId: getTime
+      summary: Get current time from external API
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                timezone:
+                  type: string
+                  example: "Etc/UTC"
+      responses:
+        '200':
+          description: Current time
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  time:
+                    type: string
+                    example: "2025-05-09T15:00:00Z"
