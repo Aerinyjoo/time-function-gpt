@@ -5,7 +5,7 @@ info:
   description: 충만이가 현재 시간을 인식하기 위한 API
 
 servers:
-  - url: https://gpt-time.onrender.com
+  - url: https://gpt-time-server.onrender.com
 
 paths:
   /get-time:
